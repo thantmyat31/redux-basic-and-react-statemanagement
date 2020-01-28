@@ -24,10 +24,6 @@ const buyIceCream = () => {
 };
 
 //reducer start
-// const initialState = {
-// 	numberOfCake: 10,
-// 	numberOfIceCream: 20
-// };
 const initialCake = {
 	numberOfCake: 10
 };
@@ -35,25 +31,6 @@ const initialCake = {
 const initialIceCream = {
 	numberOfIceCream: 20
 };
-
-// const reducer = (state = initialState, action) => {
-// 	switch (action.type) {
-// 		case BUY_CAKE:
-// 			return {
-// 				...state,
-// 				numberOfCake: state.numberOfCake - 1
-// 			};
-
-// 		case BUY_ICECREAM:
-// 			return {
-// 				...state,
-// 				numberOfIceCream: state.numberOfIceCream - 1
-// 			};
-
-// 		default:
-// 			return state;
-// 	}
-// };
 
 const cakeReducer = (state = initialCake, action) => {
 	switch (action.type) {
@@ -82,7 +59,6 @@ const iceCreamReducer = (state = initialIceCream, action) => {
 };
 
 //store start
-
 //create rootReducer to merge/combine the multiple reducers in one root
 const rootReducer = combineReducer({
 	cake: cakeReducer,
