@@ -1,0 +1,7 @@
+const appActionTypes = {
+	FETCH_IMAGE_START: 'FETCH_IMAGE_START',
+	FETCH_IMAGE_SUCCESS: 'FETCH_IMAGE_SUCCESS',
+	FETCH_IMAGE_FAILURE: 'FETCH_IMAGE_FAILURE'
+};
+
+export default appActionTypes;
