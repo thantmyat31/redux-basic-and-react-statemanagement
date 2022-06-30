@@ -1,0 +1,74 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+.App {
+  background-color:#fff;
+  width:100%;
+  min-height:100vh;
+  padding:40px;
+}
+h1, h2 {
+  margin-bottom:20px;
+}
+.container {
+  padding:15px;
+  border:1px solid #d6d6d6;
+  margin-bottom:15px;
+}
+.button {
+  cursor: pointer;
+  margin-top:15px;
+  margin-right:15px;
+  background:rgb(2, 165, 229);
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  box-shadow:2px 2px 5px 1px #ddd;
+  padding:12px 30px;
+}
+.button:active {
+  box-shadow:4px 4px 10px 2px #ddd;
+}
+.post {
+  background-color:#fff;
+  padding:15px;
+  box-shadow:3px 4px 10px 1px #ddd;
+  margin:15px 0;
+  cursor: pointer;
+}
+.post:hover {
+  background-color:#f6f6f6;
+}
+.counter {
+  max-width:150px;
+  padding:10px;
+  border:1px solid #d6d6d6;
+}
+.loading {
+  display:block;
+  margin:100px auto;
+  width:50px;
+  height:50px;
+  border-width:5px;
+  border-style:solid;
+  border-color:#ddd #ddd #ddd #f6f6f6;
+  animation-name: loading;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay:0s; 
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+  animation-fill-mode:forwards;
+  border-radius:50%;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
