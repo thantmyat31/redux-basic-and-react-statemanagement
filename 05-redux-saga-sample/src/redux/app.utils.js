@@ -1,10 +1,9 @@
-import axios from 'axios';
-
 export const fetchImage = async () => {
-	const response = await axios.get(`https://jsonplaceholder.typicode.com/photos`);
-
-	if (response.status >= 400) {
-		throw new Error(response.error);
+	try {
+		const response = await fetch(`https://jsonplaceholder.typicode.com/photos`);
+		const result = response.json();
+		return result;
+	} catch (error) {
+		throw new Error(error);
 	}
-	return response;
 };

@@ -1,5 +1,4 @@
 import userActionTypes from './user.type';
-import axios from 'axios';
 
 export const userFetchStart = () => {
 	return {
@@ -31,11 +30,10 @@ export const userSearch = (query) => {
 export const fetchUser = () => {
 	return (dispatch) => {
 		dispatch(userFetchStart());
-		axios
-			.get('https://jsonplaceholder.typicode.com/users')
-			.then((response) => {
-				dispatch(userFetchSuccess(response.data));
-			})
+
+		fetch('https://jsonplaceholder.typicode.com/users')
+			.then(response => response.json())
+			.then(result => dispatch(userFetchSuccess(result)))
 			.catch((error) => {
 				dispatch(userFetchFailure(error.message));
 			});

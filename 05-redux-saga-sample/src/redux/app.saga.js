@@ -5,8 +5,8 @@ import { fetchImage } from './app.utils';
 
 function* handleImageStartSaga() {
 	try {
-		const response = yield call(fetchImage);
-		yield put(fetchActionSuccess(response.data));
+		const result = yield call(fetchImage);
+		yield put(fetchActionSuccess(result));
 	} catch (error) {
 		yield put(fetchActionFailure(error));
 	}
